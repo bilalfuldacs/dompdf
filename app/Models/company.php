@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class company extends Model
+{
+    use HasFactory;
+    protected $fillable = [
+        'name',
+        'email',
+        'address',
+        'phone_number',
+        'city',
+        'postal_code',
+        'logo',
+      
+    ];
+    public function user()
+    {return $this->hasMany(user::class);}
+}
